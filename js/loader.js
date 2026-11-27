@@ -25,6 +25,7 @@
         slot.outerHTML = htmlList[idx];
       });
 
+      await loadScript("js/quiz-bank.js");
       await loadScript("js/main.js");
       await loadScript("js/scroll-reveal.js");
     } catch (err) {
