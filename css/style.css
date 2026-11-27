@@ -1,139 +1,139 @@
 :root {
-  /* Palet terang : Washi Cream & Pastel Jepang hangat yang cerah */
-  --kinari: #fdf8f2;
+  /* Palet terang : Pastel Cold Cerah (Porcelain Mist, Cool Sakura, Mint, Sky, Lavender) */
+  --kinari: #f7f9fc;
   --shiro: #ffffff;
-  --sumi: #332824;
-  --hai: #77665d;
-  --line: rgba(154, 122, 102, 0.20);
-  --line-soft: rgba(154, 122, 102, 0.11);
-  --line-ghost: rgba(154, 122, 102, 0.11);
-  --shu: #cc5c4e;
-  --shu-soft: #faeae7;
+  --sumi: #1f2433;
+  --hai: #5e667b;
+  --line: rgba(116, 128, 162, 0.20);
+  --line-soft: rgba(116, 128, 162, 0.10);
+  --line-ghost: rgba(116, 128, 162, 0.12);
+  --shu: #c25882;
+  --shu-soft: #fcecf3;
 
-  /* Warna pastel asli untuk tiap jenis omamori (depan & belakang selaras) */
-  --sakura: #fef0f2;
-  --sakura-border: rgba(216, 146, 160, 0.26);
-  --sakura-back: #fce0e5;
-  --sakura-back-ink: #5e2933;
-  --sakura-back-muted: #854b57;
+  /* Warna pastel sejuk cerah untuk tiap jenis omamori (depan & belakang selaras) */
+  --sakura: #fdedf4;
+  --sakura-border: rgba(214, 138, 172, 0.28);
+  --sakura-back: #fad6e6;
+  --sakura-back-ink: #5d213e;
+  --sakura-back-muted: #844564;
 
-  --anzan: #fff4f6;
-  --anzan-border: rgba(224, 164, 176, 0.26);
-  --anzan-back: #fde6eb;
-  --anzan-back-ink: #632f3a;
-  --anzan-back-muted: #8a525e;
+  --anzan: #fdf3f8;
+  --anzan-border: rgba(220, 156, 188, 0.28);
+  --anzan-back: #f9e0ee;
+  --anzan-back-ink: #622846;
+  --anzan-back-muted: #8a4c6c;
 
-  --matcha: #eff7ec;
-  --matcha-border: rgba(132, 176, 124, 0.26);
-  --matcha-ink: #2f5b33;
-  --matcha-back: #dcefd7;
-  --matcha-back-ink: #244728;
-  --matcha-back-muted: #466d4a;
+  --matcha: #ebf8f3;
+  --matcha-border: rgba(114, 184, 160, 0.28);
+  --matcha-ink: #1e5242;
+  --matcha-back: #d2efe4;
+  --matcha-back-ink: #163f32;
+  --matcha-back-muted: #396959;
 
-  --asagi: #edf6fc;
-  --asagi-border: rgba(118, 170, 204, 0.26);
-  --asagi-ink: #275475;
-  --asagi-back: #d6ebfa;
-  --asagi-back-ink: #1e4360;
-  --asagi-back-muted: #416887;
+  --asagi: #edf5fe;
+  --asagi-border: rgba(118, 168, 220, 0.28);
+  --asagi-ink: #224a78;
+  --asagi-back: #d6e9fc;
+  --asagi-back-ink: #1a3b61;
+  --asagi-back-muted: #3e6087;
 
-  --kuchinashi: #fef7df;
-  --kuchinashi-border: rgba(218, 178, 86, 0.28);
-  --kuchinashi-ink: #7d5b1a;
-  --kuchinashi-back: #fcebbd;
-  --kuchinashi-back-ink: #573e10;
-  --kuchinashi-back-muted: #7f6025;
+  --kuchinashi: #fdfbe6;
+  --kuchinashi-border: rgba(208, 192, 92, 0.30);
+  --kuchinashi-ink: #625819;
+  --kuchinashi-back: #f7f0bd;
+  --kuchinashi-back-ink: #473f10;
+  --kuchinashi-back-muted: #6e6428;
 
-  --fuji: #f5effb;
-  --fuji-border: rgba(166, 138, 198, 0.26);
-  --fuji-back: #e8dbf7;
-  --fuji-back-ink: #432d5e;
-  --fuji-back-muted: #664e85;
+  --fuji: #f3effe;
+  --fuji-border: rgba(158, 136, 218, 0.28);
+  --fuji-back: #e2d8fc;
+  --fuji-back-ink: #3a2569;
+  --fuji-back-muted: #5d478c;
 
-  --aka: #fdf0ec;
-  --aka-border: rgba(208, 114, 96, 0.26);
-  --aka-back: #f9dbd3;
-  --aka-back-ink: #64261e;
-  --aka-back-muted: #8c483f;
+  --aka: #fcedf1;
+  --aka-border: rgba(212, 122, 146, 0.28);
+  --aka-back: #f7d4de;
+  --aka-back-ink: #611e32;
+  --aka-back-muted: #874056;
 
-  --card-back-bg: #fcebbd;
-  --card-back-fg: #573e10;
-  --card-back-muted: #7f6025;
-  --header-bg: rgba(253, 248, 242, 0.96);
+  --card-back-bg: #e2d8fc;
+  --card-back-fg: #3a2569;
+  --card-back-muted: #5d478c;
+  --header-bg: rgba(247, 249, 252, 0.84);
 
-  --shadow-soft: 0 8px 26px rgba(128, 92, 72, 0.06);
-  --shadow-hover: 0 14px 34px rgba(128, 92, 72, 0.11);
-  --shadow-dialog: 0 22px 54px rgba(74, 48, 36, 0.14);
+  --shadow-soft: 0 8px 26px rgba(56, 70, 108, 0.055);
+  --shadow-hover: 0 14px 34px rgba(56, 70, 108, 0.105);
+  --shadow-dialog: 0 22px 54px rgba(34, 42, 72, 0.13);
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.38, 0.64, 1);
   --ease-flip: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [data-theme="dark"] {
-  /* Palet gelap : Twilight Espresso & Pastel Hangat selaras */
-  --kinari: #1e1715;
-  --shiro: #2a211e;
-  --sumi: #f6ede4;
-  --hai: #c4b0a3;
-  --line: rgba(238, 208, 188, 0.15);
-  --line-soft: rgba(238, 208, 188, 0.09);
-  --line-ghost: rgba(238, 208, 188, 0.085);
-  --shu: #e68c7a;
-  --shu-soft: rgba(230, 140, 122, 0.16);
+  /* Palet gelap : Cool Midnight Indigo & Pastel Sejuk selaras */
+  --kinari: #151822;
+  --shiro: #1e2230;
+  --sumi: #eef1f8;
+  --hai: #a5aec4;
+  --line: rgba(182, 196, 232, 0.15);
+  --line-soft: rgba(182, 196, 232, 0.09);
+  --line-ghost: rgba(182, 196, 232, 0.10);
+  --shu: #e388ad;
+  --shu-soft: rgba(227, 136, 173, 0.16);
 
-  --sakura: #362427;
-  --sakura-border: rgba(232, 152, 168, 0.20);
-  --sakura-back: #462b32;
-  --sakura-back-ink: #fce8ec;
-  --sakura-back-muted: #dab4bd;
+  --sakura: #2b1f2a;
+  --sakura-border: rgba(232, 152, 192, 0.22);
+  --sakura-back: #3b2638;
+  --sakura-back-ink: #fceaf3;
+  --sakura-back-muted: #d9b4c8;
 
-  --anzan: #352528;
-  --anzan-border: rgba(236, 174, 184, 0.20);
-  --anzan-back: #452e34;
-  --anzan-back-ink: #fdf0f2;
-  --anzan-back-muted: #dcc0c7;
+  --anzan: #2a212c;
+  --anzan-border: rgba(236, 172, 204, 0.22);
+  --anzan-back: #3a293c;
+  --anzan-back-ink: #fdf0f7;
+  --anzan-back-muted: #dcbfd0;
 
-  --matcha: #253024;
-  --matcha-border: rgba(154, 198, 146, 0.20);
-  --matcha-ink: #b8dab0;
-  --matcha-back: #30412e;
-  --matcha-back-ink: #ebf7e8;
-  --matcha-back-muted: #b9d1b5;
+  --matcha: #1b2b29;
+  --matcha-border: rgba(132, 206, 184, 0.22);
+  --matcha-ink: #a6e0ce;
+  --matcha-back: #223b38;
+  --matcha-back-ink: #e8faf4;
+  --matcha-back-muted: #aed4c8;
 
-  --asagi: #232d36;
-  --asagi-border: rgba(144, 192, 224, 0.20);
-  --asagi-ink: #aad0ea;
-  --asagi-back: #2c3d4d;
-  --asagi-back-ink: #e8f4fc;
-  --asagi-back-muted: #b3cde0;
+  --asagi: #1c2638;
+  --asagi-border: rgba(136, 188, 240, 0.22);
+  --asagi-ink: #a8d2f8;
+  --asagi-back: #24344d;
+  --asagi-back-ink: #eaf4fe;
+  --asagi-back-muted: #b0cbe6;
 
-  --kuchinashi: #362d1e;
-  --kuchinashi-border: rgba(232, 194, 108, 0.22);
-  --kuchinashi-ink: #efd28c;
-  --kuchinashi-back: #483b22;
-  --kuchinashi-back-ink: #fdf4dc;
-  --kuchinashi-back-muted: #dac79c;
+  --kuchinashi: #2b2a1e;
+  --kuchinashi-border: rgba(226, 212, 114, 0.22);
+  --kuchinashi-ink: #ede398;
+  --kuchinashi-back: #3b3823;
+  --kuchinashi-back-ink: #fcf9dc;
+  --kuchinashi-back-muted: #d8d1a0;
 
-  --fuji: #2f2638;
-  --fuji-border: rgba(186, 160, 220, 0.20);
-  --fuji-back: #3e314d;
-  --fuji-back-ink: #f3ebfc;
-  --fuji-back-muted: #cbbcdf;
+  --fuji: #252036;
+  --fuji-border: rgba(180, 158, 236, 0.22);
+  --fuji-back: #332a4c;
+  --fuji-back-ink: #f3effe;
+  --fuji-back-muted: #c8bee6;
 
-  --aka: #392420;
-  --aka-border: rgba(230, 134, 114, 0.22);
-  --aka-back: #4d2e28;
-  --aka-back-ink: #fdebe7;
-  --aka-back-muted: #e0bab2;
+  --aka: #2f1e26;
+  --aka-border: rgba(232, 140, 168, 0.22);
+  --aka-back: #412633;
+  --aka-back-ink: #fdebf1;
+  --aka-back-muted: #dfb7c5;
 
-  --card-back-bg: #483b22;
-  --card-back-fg: #fdf4dc;
-  --card-back-muted: #dac79c;
-  --header-bg: rgba(30, 23, 21, 0.96);
+  --card-back-bg: #332a4c;
+  --card-back-fg: #f3effe;
+  --card-back-muted: #c8bee6;
+  --header-bg: rgba(21, 24, 34, 0.84);
 
-  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.28);
-  --shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.38);
-  --shadow-dialog: 0 24px 56px rgba(0, 0, 0, 0.50);
+  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.30);
+  --shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.40);
+  --shadow-dialog: 0 24px 56px rgba(0, 0, 0, 0.52);
 }
 
 * {
@@ -2766,7 +2766,7 @@ footer {
   background-color: var(--kinari);
   background-image:
     radial-gradient(circle at 18% 20%, var(--sakura) 0%, transparent 45%),
-    radial-gradient(circle at 84% 78%, var(--kuchinashi) 0%, transparent 46%);
+    radial-gradient(circle at 84% 78%, var(--asagi) 0%, transparent 46%);
   background-size: 100% 100%;
 }
 
@@ -2787,7 +2787,7 @@ footer {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #f3b5c0, #f5d88b, #b3d6a9, #a8cfe8);
+  background: linear-gradient(90deg, #f2b8d4, #b5d9f8, #b2ead8, #cabcf7);
   opacity: 0.92;
   pointer-events: none;
 }
@@ -2809,7 +2809,7 @@ footer {
 .gate-enter-btn:hover,
 .btn-ink:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 10px 22px rgba(204, 92, 78, 0.22);
+  box-shadow: 0 10px 22px rgba(194, 88, 130, 0.22);
 }
 
 .btn-ghost {
@@ -3064,7 +3064,7 @@ footer {
   width: 12px;
   height: 16px;
   border-radius: 65% 35% 65% 35%;
-  background: #f5bfc8;
+  background: #f4c2db;
   opacity: 0.45;
   animation: petalDrift var(--dur, 11s) linear var(--delay, 0s) infinite;
   will-change: transform, opacity;
@@ -3172,7 +3172,7 @@ footer {
   height: 100%;
   width: 25%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--shu), #e5a95e);
+  background: linear-gradient(90deg, var(--shu), #8fa8e8);
   transition: width 0.5s var(--ease-smooth);
 }
 
@@ -3186,4 +3186,158 @@ footer {
   border-color: var(--shu);
   background: var(--shiro);
   box-shadow: var(--shadow-soft);
+}
+/* === Layout Profil Tim Editorial (Bingkai Foto 1:1 HD Serasi) === */
+.team-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  margin-bottom: 14px;
+}
+
+.team-kicker {
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--shu);
+  font-weight: 600;
+}
+
+.team-sub {
+  font-size: 0.78rem;
+  color: var(--hai);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 0;
+}
+
+.member-card {
+  background: var(--shiro);
+  border: 1px solid var(--line-ghost);
+  border-radius: 18px;
+  padding: 12px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.42s var(--ease-spring), box-shadow 0.42s var(--ease-smooth), border-color 0.35s var(--ease-smooth), background-color 0.55s var(--ease-smooth);
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--sakura-border);
+  box-shadow: var(--shadow-hover);
+}
+
+.member-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 13px;
+  overflow: hidden;
+  background: var(--kinari);
+  border: 1px solid var(--line-soft);
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform 0.65s var(--ease-smooth);
+}
+
+.member-card:hover .member-photo {
+  transform: scale(1.04);
+}
+
+.member-badge {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--shiro);
+  color: var(--shu);
+  border: 1px solid var(--line-ghost);
+  box-shadow: 0 3px 10px rgba(31, 36, 51, 0.08);
+}
+
+.member-info {
+  padding: 0 4px;
+}
+
+.member-info h3 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 0.96rem;
+  color: var(--sumi);
+  line-height: 1.35;
+  margin-bottom: 3px;
+}
+
+.member-nim {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--hai);
+}
+
+@media (max-width: 720px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .member-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .member-frame {
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    border-radius: 12px;
+  }
+
+  .member-badge {
+    top: 5px;
+    left: 5px;
+    font-size: 0.64rem;
+    padding: 1px 6px;
+  }
+}
+/* Highlight ringkas asal-usul era pada bagian 02 Linimasa */
+.era-origin {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--sumi);
+  background: var(--asagi);
+  border: 1px solid var(--asagi-border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.era-origin strong {
+  color: var(--asagi-ink);
+  font-weight: 600;
 }

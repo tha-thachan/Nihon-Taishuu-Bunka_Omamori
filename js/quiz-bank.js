@@ -168,7 +168,7 @@ window.OMAMORI_QUIZ_BANK = [
       "Periode Meiji"
     ],
     "ans": 1,
-    "note": "Periode Jomon (sekitar 18.000 sampai 300 SM) menandai akar awal benda kecil pelindung seperti magatama."
+    "note": "Periode Jomon (sekitar 14.000 sampai 300 SM) menandai akar awal benda kecil pelindung seperti magatama."
   },
   {
     "q": "Pada era Nara dan Heian, kelompok mana yang kerap membawa jimat doa dari kuil untuk keselamatan di medan perang?",

@@ -359,32 +359,40 @@
   const tracks = {
     history: [
       {
-        label: "Periode Jomon",
-        period: "Sekitar 18.000 – 300 SM",
+        label: "Periode Jōmon",
+        period: "縄文時代 · Sekitar 14.000 – 300 SM",
         heading: "Cikal Bakal dari Manik Batu Magatama",
-        body: "Masyarakat Jepang kuno mengenakan manik batu berbentuk koma bernama magatama untuk menangkal roh jahat dan bencana alam.",
-        detail: "Akar awal kepercayaan bahwa benda kecil yang dibawa dekat tubuh dapat memberi perlindungan."
+        originLabel: "Asal-usul era",
+        origin: "Nama Jōmon berarti 'pola tali', diambil dari corak tekan tali pada tembikar masyarakat pemburu-pengumpul Jepang prasejarah yang hidup sangat bergantung pada alam.",
+        body: "Karena dekat dengan alam, tumbuh kepercayaan animisme awal terhadap roh penunggu alam (cikal bakal Shinto). Dari keyakinan inilah masyarakat kuno mengenakan manik batu berbentuk koma bernama magatama untuk menangkal roh jahat dan bencana.",
+        detail: "Jejak penting: Melahirkan kepercayaan awal bahwa benda kecil yang dibawa dekat tubuh dapat memberi perlindungan."
       },
       {
         label: "Nara & Heian",
-        period: "710 – 1185 M",
+        period: "奈良・平安時代 · 710 – 1185 M",
         heading: "Jimat Kuil bagi Bangsawan dan Samurai",
-        body: "Seiring masuknya ajaran Buddha, termasuk ritual doa kito aliran Shingon sejak abad ke-9, kuil mulai membagikan jimat doa. Di era Heian, bangsawan dan samurai membawanya untuk keselamatan di medan perang.",
-        detail: "Mulai lahir ritual pemberkatan resmi oleh biksu dan pendeta kuil."
+        originLabel: "Asal-usul era",
+        origin: "Dinamai dari pusat kekaisaran Jepang saat itu, yaitu ibu kota Nara (Heijō-kyō) sebelum dipindahkan ke Heian-kyō (kini Kyoto) yang berarti 'ibu kota kedamaian'.",
+        body: "Pada masa ini ajaran Buddha resmi berkembang dan berpadu dengan tradisi Shinto (shinbutsu-shūgō), termasuk ritual doa kitō dari aliran Shingon sejak abad ke-9. Kuil mulai membagikan jimat tertulis yang awalnya dibawa bangsawan istana dan samurai demi keselamatan di medan perang.",
+        detail: "Jejak penting: Mulai lahir tradisi pemberkatan jimat secara resmi oleh biksu Buddha dan pendeta Shinto."
       },
       {
         label: "Periode Edo",
-        period: "1603 – 1868 M (Tokugawa)",
+        period: "江戸時代 · 1603 – 1868 M (Tokugawa)",
         heading: "Lahirnya Bentuk Kantong Kain Modern",
-        body: "Tradisi jimat Buddha dan ofuda Shinto berpadu membentuk kantong kain brokat yang praktis dibawa. Ramainya perjalanan ziarah membuat masyarakat umum membawa omamori dalam kehidupan sehari-hari.",
-        detail: "Setiap daerah dan kuil mulai mengembangkan ciri khas motif serta spesialisasi doanya sendiri."
+        originLabel: "Asal-usul era",
+        origin: "Diambil dari nama kota Edo (kini Tokyo), pusat pemerintahan Keshogunan Tokugawa yang membawa masa damai panjang lebih dari 250 tahun tanpa perang saudara.",
+        body: "Kondisi jalan yang aman membuat rakyat biasa leluasa bepergian dan ramai berziarah ke kuil-kuil terkenal. Tradisi jimat Buddha dan ofuda Shinto pun berpadu dalam kantong kain brokat kecil yang praktis dibawa masyarakat umum sehari-hari.",
+        detail: "Jejak penting: Omamori tak lagi eksklusif bagi kaum bangsawan; setiap daerah dan kuil mulai mengembangkan motif serta doa khasnya sendiri."
       },
       {
         label: "Meiji – Kini",
-        period: "1868 M – Sekarang",
+        period: "明治時代〜現在 · 1868 M – Sekarang",
         heading: "Ragam Harapan Kehidupan Modern",
-        body: "Omamori terus berkembang mengikuti kebutuhan zaman: mulai dari kelulusan ujian, karier, percintaan, keselamatan berkendara, hingga hadiah bermakna bagi orang terdekat.",
-        detail: "Menjadi ikon budaya Jepang yang memadukan tradisi spiritual, seni tekstil, dan kehidupan harian."
+        originLabel: "Asal-usul era",
+        origin: "Dimulai dari Restorasi Meiji (1868) yang mengakhiri era kekuasaan samurai dan membawa Jepang masuk ke masa modernisasi, lalu berlanjut ke era Taishō, Shōwa, Heisei, hingga Reiwa.",
+        body: "Seiring kehidupan berubah menjadi urban dan serba cepat, omamori tetap bertahan dan menyesuaikan kebutuhan zaman: mulai dari kelulusan ujian, karier, percintaan, keselamatan berkendara, hingga hadiah bermakna bagi orang terdekat.",
+        detail: "Jejak penting: Menjadi ikon budaya Jepang yang memadukan tradisi spiritual, seni tekstil, dan keseharian modern."
       }
     ],
     material: [
@@ -392,36 +400,46 @@
         label: "Batu & Kayu Alam",
         period: "Tahap 01 · Material Alami Awal",
         heading: "Dari Batu Magatama hingga Papan Kayu Kifuda",
-        body: "Sebelum berbentuk kantong, benda pelindung dibuat dari batu alam seperti magatama, potongan kayu suci (kifuda), atau benda alam yang dianggap menyimpan energi perlindungan.",
+        originLabel: "Latar perubahan",
+        origin: "Berawal sejak zaman prasejarah Jōmon hingga Jepang kuno ketika manusia mengandalkan batu giok dan kayu alam di sekitar sebagai simbol pelindung.",
+        body: "Sebelum berbentuk kantong kain, benda pelindung dibuat dari batu alam seperti magatama, potongan kayu suci (kifuda), atau benda alam yang dianggap menyimpan energi keselamatan.",
         detail: "Hingga sekarang, papan kayu kecil bertuliskan doa masih menjadi inti di dalam banyak omamori tradisional."
       },
       {
         label: "Kertas Doa & Ofuda",
         period: "Tahap 02 · Media Kertas Suci",
         heading: "Lembaran Kertas Washi Bertuliskan Doa",
-        body: "Berkembangnya tradisi menulis sutra Buddha dan ofuda Shinto menghadirkan jimat berbahan kertas lipat yang memuat nama dewa atau kaligrafi doa khusus.",
-        detail: "Karena kertas mudah rusak saat dibawa bepergian, muncul kebutuhan akan pelindung luar yang lebih kuat."
+        originLabel: "Latar perubahan",
+        origin: "Berkembang pada era Nara dan Heian seiring masuknya budaya tulis aksara kanji serta tradisi penyalinan sutra Buddha di kuil.",
+        body: "Tradisi menulis sutra Buddha dan ofuda Shinto menghadirkan jimat berbahan kertas washi lipat yang memuat nama dewa atau kaligrafi doa khusus.",
+        detail: "Karena kertas mudah robek atau kusut saat dibawa bepergian, muncul kebutuhan akan pelindung luar yang lebih kuat."
       },
       {
         label: "Kantong Kain Brokat",
         period: "Tahap 03 · Era Sutra & Tenun",
         heading: "Kain Sutra Brokat & Simpul Nijūkanō",
-        body: "Untuk melindungi kertas atau kayu doa di dalamnya, dibuatlah kantong kecil dari kain katun hingga sutra brokat bersulam indah yang diikat dengan simpul khusus nijūkanō yang melambangkan harapan agar doa terkabul.",
+        originLabel: "Latar perubahan",
+        origin: "Populer sejak periode Edo ketika tradisi ziarah rakyat meluas dan jimat kertas perlu wadah yang awet dibawa menempuh perjalanan jauh.",
+        body: "Untuk melindungi kertas atau kayu doa di dalamnya, dibuatlah kantong kecil dari kain katun hingga sutra brokat bersulam indah yang diikat simpul khusus nijūkanō sebagai lambang harapan agar doa terkabul.",
         detail: "Gaya Kyoto cenderung lembut dengan pewarnaan halus, sedangkan gaya Tokyo sering tampil lebih tegas dan grafis."
       },
       {
         label: "Bentuk Khusus & Praktis",
         period: "Tahap 04 · Adaptasi Keseharian",
         heading: "Plakat Kayu Mini, Lonceng, Kartu & Stiker",
+        originLabel: "Latar perubahan",
+        origin: "Berkembang memasuki abad ke-20 saat masyarakat mulai rutin membawa dompet, kunci, serta bepergian memakai mobil dan motor.",
         body: "Selain kantong kain, kuil mulai membuat omamori dalam rupa plakat kayu mini bergaya ema, lonceng kecil, kartu tipis khusus dompet, hingga stiker keselamatan untuk ditempel di kendaraan.",
-        detail: "Bentuknya menyesuaikan benda modern agar mudah dibawa tanpa cepat rusak."
+        detail: "Bentuknya menyesuaikan benda modern agar mudah dibawa dekat dengan aktivitas harian tanpa cepat rusak."
       },
       {
         label: "Gaya Modern & Kontemporer",
         period: "Tahap 05 · Desain Masa Kini",
         heading: "Cincin, Akrilik, Logam & Motif Budaya Pop",
-        body: "Banyak kuil kini menghadirkan desain modern yang memikat generasi muda, seperti omamori berbentuk cincin di Kuil Shimogamo Kyoto, gantungan logam/akrilik minimalis, hingga kolaborasi motif karakter populer.",
-        detail: "Meski bentuk luarnya makin beragam dan estetik, esensi niat baik dan doa di dalamnya tetap dijaga."
+        originLabel: "Latar perubahan",
+        origin: "Tren era Heisei hingga Reiwa saat banyak kuil berinovasi menghadirkan desain baru agar tradisi omamori tetap dekat dengan generasi muda.",
+        body: "Berbagai kuil kini menawarkan desain modern seperti omamori berbentuk cincin di Kuil Shimogamo Kyoto, gantungan akrilik atau logam minimalis, hingga kolaborasi motif karakter populer.",
+        detail: "Meski tampilan luarnya makin beragam dan estetik, esensi niat baik dan doa di dalamnya tetap dijaga."
       }
     ]
   };
@@ -433,6 +451,7 @@
   const eraContent = document.getElementById("eraContent");
   const eraPeriod = document.getElementById("eraPeriod");
   const eraHeading = document.getElementById("eraHeading");
+  const eraOrigin = document.getElementById("eraOrigin");
   const eraBody = document.getElementById("eraBody");
   const eraDetail = document.getElementById("eraDetail");
   const eraCount = document.getElementById("eraCount");
@@ -456,6 +475,9 @@
     const e = list[eraIdx];
     eraPeriod.textContent = e.period;
     eraHeading.textContent = e.heading;
+    if (eraOrigin) {
+      eraOrigin.innerHTML = "<strong>" + (e.originLabel || "Asal-usul era") + ":</strong> " + e.origin;
+    }
     eraBody.textContent = e.body;
     eraDetail.textContent = e.detail;
     eraCount.textContent = "0" + (eraIdx + 1) + " / 0" + list.length;
@@ -1055,16 +1077,16 @@
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
 
     // Latar kertas editorial
-    ctx.fillStyle = isDark ? "#1e1715" : "#fdf8f2";
+    ctx.fillStyle = isDark ? "#151822" : "#f7f9fc";
     ctx.fillRect(0, 0, 720, 960);
 
     // Bingkai garis rambut
-    ctx.strokeStyle = isDark ? "#473832" : "#e8dbd0";
+    ctx.strokeStyle = isDark ? "#32394f" : "#dce2f0";
     ctx.lineWidth = 2;
     ctx.strokeRect(36, 36, 648, 888);
 
     // Header teks
-    ctx.fillStyle = isDark ? "#e68c7a" : "#cc5c4e";
+    ctx.fillStyle = isDark ? "#e388ad" : "#c25882";
     ctx.font = "600 18px sans-serif";
     ctx.textAlign = "center";
     ctx.fillText("OMAMORI NO SEKAI  ·  お守りの世界", 360, 96);
@@ -1175,17 +1197,17 @@
     });
 
     // Judul & Harapan Pribadi
-    ctx.fillStyle = isDark ? "#f6ede4" : "#332824";
+    ctx.fillStyle = isDark ? "#eef1f8" : "#1f2433";
     ctx.font = "600 28px Georgia, serif";
     ctx.fillText(repState.blessingName, 360, 622);
 
-    ctx.fillStyle = isDark ? "#c4b0a3" : "#77665d";
+    ctx.fillStyle = isDark ? "#a5aec4" : "#5e667b";
     ctx.font = "500 18px sans-serif";
     ctx.fillText(repSummary.textContent, 360, 658);
 
     // Bungkus teks harapan (word wrap)
     const wish = (repWishInput.value.trim() || "Semoga tugas dan ujian semester ini lancar, nilai aman, dan tetap sempat istirahat.");
-    ctx.fillStyle = isDark ? "#f6ede4" : "#332824";
+    ctx.fillStyle = isDark ? "#eef1f8" : "#1f2433";
     ctx.font = "italic 22px Georgia, serif";
     const words = ("“" + wish + "”").split(" ");
     let line = "";
@@ -1203,7 +1225,7 @@
     ctx.fillText(line.trim(), 360, ly);
 
     // Footer cap pameran
-    ctx.fillStyle = isDark ? "#c4b0a3" : "#77665d";
+    ctx.fillStyle = isDark ? "#a5aec4" : "#5e667b";
     ctx.font = "500 15px sans-serif";
     ctx.fillText("Pameran Taishu Bunka · Stan Omamori no Sekai", 360, 882);
 
@@ -1330,7 +1352,7 @@
     });
   });
 
-  /* === 17. Mini Kuis Acak dari 100 Bank Soal (4 atau 6 Soal Berbeda Tiap Sesi) === */
+  /* === 17. Mini Kuis Pengunjung (6 Soal Otomatis Acak dari 100 Bank Soal di Balik Layar) === */
   const fallbackBank = [
     {
       q: "Mengapa dalam tradisi Jepang kantong omamori tidak boleh dibuka?",
@@ -1343,12 +1365,12 @@
       note: "Tepat sekali! Membuka kantongnya dipercaya melepaskan doa dan berkah yang sudah disucikan."
     }
   ];
-  const fullQuizBank = (Array.isArray(window.OMAMORI_QUIZ_BANK) && window.OMAMORI_QUIZ_BANK.length >= 4)
+  const fullQuizBank = (Array.isArray(window.OMAMORI_QUIZ_BANK) && window.OMAMORI_QUIZ_BANK.length >= 6)
     ? window.OMAMORI_QUIZ_BANK
     : fallbackBank;
 
-  const SEEN_STORAGE_KEY = "omamori-quiz-seen-v1";
-  let quizSize = 4;
+  const SEEN_STORAGE_KEY = "omamori-quiz-seen-v2";
+  const QUIZ_SIZE = 6;
   let activeQuizSet = [];
   let triviaIdx = 0;
   let triviaScoreVal = 0;
@@ -1361,8 +1383,6 @@
   const triviaScoreEl = document.getElementById("triviaScore");
   const triviaProgressBar = document.getElementById("triviaProgressBar");
   const btnNextTrivia = document.getElementById("btnNextTrivia");
-  const btnShuffleTrivia = document.getElementById("btnShuffleTrivia");
-  const sizePills = document.querySelectorAll(".size-pill");
 
   function fisherYates(arr) {
     const copy = arr.slice();
@@ -1394,10 +1414,10 @@
   function pickRandomQuizSet(count) {
     const total = fullQuizBank.length;
     const targetCount = Math.min(count, total);
-    let seen = loadSeenIndices().filter((idx) => Number.isInteger(idx) && idx >= 0 && idx < total);
+    const seen = loadSeenIndices().filter((idx) => Number.isInteger(idx) && idx >= 0 && idx < total);
     const seenSet = new Set(seen);
 
-    let unseenPool = [];
+    const unseenPool = [];
     for (let i = 0; i < total; i++) {
       if (!seenSet.has(i)) unseenPool.push(i);
     }
@@ -1407,7 +1427,6 @@
       pickedIndices = fisherYates(unseenPool).slice(0, targetCount);
       saveSeenIndices(seen.concat(pickedIndices));
     } else {
-      // Habiskan sisa soal yang belum pernah keluar, lalu reset dan acak ulang sisanya
       const firstPart = fisherYates(unseenPool);
       const exclude = new Set(firstPart);
       const refillPool = [];
@@ -1419,7 +1438,6 @@
       saveSeenIndices(secondPart);
     }
 
-    // Acak urutan pilihan jawaban di tiap soal agar tidak mudah dihafal posisinya
     return pickedIndices.map((idx) => {
       const src = fullQuizBank[idx];
       const mappedOpts = src.opts.map((text, oi) => ({ text, isCorrect: oi === src.ans }));
@@ -1433,15 +1451,12 @@
     });
   }
 
-  function startNewQuizSession(withToast) {
-    activeQuizSet = pickRandomQuizSet(quizSize);
+  function startNewQuizSession() {
+    activeQuizSet = pickRandomQuizSet(QUIZ_SIZE);
     triviaIdx = 0;
     triviaScoreVal = 0;
     if (triviaScoreEl) triviaScoreEl.textContent = "Skor: 0 / " + activeQuizSet.length;
     renderTrivia();
-    if (withToast) {
-      showToast(activeQuizSet.length + " soal baru diacak dari " + fullQuizBank.length + " bank soal");
-    }
   }
 
   function renderTrivia() {
@@ -1491,24 +1506,6 @@
     });
   }
 
-  sizePills.forEach((pill) => {
-    pill.addEventListener("click", () => {
-      const nextSize = Number(pill.dataset.quizSize) || 4;
-      if (nextSize === quizSize) return;
-      quizSize = nextSize;
-      sizePills.forEach((p) => p.classList.toggle("active", p === pill));
-      playHyoshigi(1.08);
-      startNewQuizSession(true);
-    });
-  });
-
-  if (btnShuffleTrivia) {
-    btnShuffleTrivia.addEventListener("click", () => {
-      playChord();
-      startNewQuizSession(true);
-    });
-  }
-
   btnNextTrivia.addEventListener("click", () => {
     const total = activeQuizSet.length;
     if (triviaIdx === total - 1) {
@@ -1516,13 +1513,13 @@
       const perfect = triviaScoreVal === total;
       openModal({
         stamp: perfect ? "大吉" : triviaScoreVal >= Math.ceil(total / 2) ? "中吉" : "吉",
-        kicker: "Hasil Kuis Acak · Bank 100 Soal",
+        kicker: "Hasil Kuis Singkat Omamori",
         title: "Skor Kamu: " + triviaScoreVal + " dari " + total,
         desc: perfect
-          ? "Sempurna! Semua soal acak berhasil kamu jawab dengan tepat. Coba acak soal baru untuk tantangan berbeda."
-          : "Terima kasih sudah ikut kuis! Tekan tombol di bawah untuk mengacak " + total + " soal baru yang berbeda dari bank 100 soal kami.",
+          ? "Luar biasa! Semua pertanyaan berhasil kamu jawab dengan tepat. Kamu sudah memahami budaya omamori dengan sangat baik."
+          : "Terima kasih sudah mencoba kuis singkat kami! Kamu bisa mengulang kuis atau langsung merakit replika omamori.",
         actions: [
-          { label: "Acak " + total + " Soal Baru ↻", primary: true, onClick: () => startNewQuizSession(true) },
+          { label: "Ulangi Kuis", primary: true, onClick: () => startNewQuizSession() },
           { label: "Tutup" }
         ]
       });
@@ -1533,7 +1530,7 @@
     }
   });
 
-  startNewQuizSession(false);
+  startNewQuizSession();
 
 
   /* === 18. Laci Menu Navigasi Minimalis untuk HP & Tablet === */
