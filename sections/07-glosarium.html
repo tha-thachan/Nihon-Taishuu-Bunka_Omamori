@@ -82,29 +82,17 @@
       </div>
 
       <!-- Mini Kuis Interaktif Tebak Fakta Omamori -->
-  <div class="trivia-box reveal-item" id="triviaBox">
-    <div class="trivia-head">
-      <div class="trivia-head-left">
-        <span class="omikuji-result-tag" style="margin:0;">Kuis Pengunjung · Acak dari 100 Soal</span>
-        <div class="trivia-size-switch" role="group" aria-label="Pilih jumlah soal kuis">
-          <button type="button" class="size-pill active" data-quiz-size="4">4 Soal</button>
-          <button type="button" class="size-pill" data-quiz-size="6">6 Soal</button>
+      <div class="trivia-box reveal-item" id="triviaBox">
+        <div class="trivia-head">
+          <span class="omikuji-result-tag" style="margin:0;">Kuis Singkat Pengunjung</span>
+          <span class="ctrl-count" id="triviaCounter">Pertanyaan 01 / 03</span>
+        </div>
+        <div class="trivia-q" id="triviaQ"></div>
+        <div class="trivia-opts" id="triviaOpts"></div>
+        <div class="trivia-feedback" id="triviaFeedback"></div>
+        <div class="step-controls" style="padding-top:12px;">
+          <span class="ctrl-count" id="triviaScore">Skor: 0 / 3</span>
+          <button type="button" class="ctrl-btn" id="btnNextTrivia">Pertanyaan Berikutnya →</button>
         </div>
       </div>
-      <span class="ctrl-count" id="triviaCounter">Pertanyaan 01 / 04</span>
-    </div>
-    <div class="trivia-progress" aria-hidden="true">
-      <div class="trivia-progress-bar" id="triviaProgressBar"></div>
-    </div>
-    <div class="trivia-q" id="triviaQ"></div>
-    <div class="trivia-opts" id="triviaOpts"></div>
-    <div class="trivia-feedback" id="triviaFeedback"></div>
-    <div class="step-controls" style="padding-top:12px;gap:8px;flex-wrap:wrap;">
-      <span class="ctrl-count" id="triviaScore">Skor: 0 / 4</span>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <button type="button" class="ctrl-btn" id="btnShuffleTrivia">Acak Soal Baru ↻</button>
-        <button type="button" class="ctrl-btn" id="btnNextTrivia" style="background:var(--sumi);color:var(--kinari);border-color:var(--sumi);">Pertanyaan Berikutnya →</button>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
