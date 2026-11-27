@@ -205,6 +205,35 @@
     if (soundOn) playChord();
   });
 
+
+  /* === Efek Percikan Interaktif & Kelopak Sakura Halus (GPU-only) === */
+  function spawnSparkles(x, y, symbols = ["✿", "✦", "守", "福", "縁"]) {
+    const count = 7;
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement("span");
+      el.className = "spark-particle";
+      el.textContent = symbols[i % symbols.length];
+      const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
+      const dist = 34 + Math.random() * 42;
+      const dx = Math.cos(angle) * dist;
+      const dy = Math.sin(angle) * dist - 24;
+      const rot = ((Math.random() - 0.5) * 60).toFixed(0) + "deg";
+      el.style.setProperty("--x", x + "px");
+      el.style.setProperty("--y", y + "px");
+      el.style.setProperty("--dx", dx.toFixed(1) + "px");
+      el.style.setProperty("--dy", dy.toFixed(1) + "px");
+      el.style.setProperty("--rot", rot);
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 950);
+    }
+  }
+
+  function spawnSparklesFromEl(targetEl, symbols) {
+    if (!targetEl) return;
+    const rect = targetEl.getBoundingClientRect();
+    spawnSparkles(rect.left + rect.width / 2, rect.top + rect.height / 2, symbols);
+  }
+
   /* === 2B. Gerbang Pembuka Interaktif (Omamori no Sekai) === */
   const openingGate = document.getElementById("openingGate");
   const gateCharmBtn = document.getElementById("gateCharmBtn");
@@ -263,11 +292,31 @@
     btn.addEventListener("click", () => selectSymbol(Number(btn.dataset.sym)));
   });
 
+  // Tambahkan kelopak sakura lembut melayang di belakang dialog gerbang pembuka
+  if (openingGate && !openingGate.querySelector(".ambient-petals")) {
+    const petalWrap = document.createElement("div");
+    petalWrap.className = "ambient-petals";
+    petalWrap.setAttribute("aria-hidden", "true");
+    const positions = [8, 22, 40, 62, 78, 91];
+    positions.forEach((leftPct, i) => {
+      const p = document.createElement("span");
+      p.className = "ambient-petal";
+      p.style.left = leftPct + "%";
+      p.style.setProperty("--dur", (10 + (i % 4) * 2.4) + "s");
+      p.style.setProperty("--delay", (-i * 1.9) + "s");
+      p.style.setProperty("--sway", (i % 2 === 0 ? 28 : -28) + "px");
+      petalWrap.appendChild(p);
+    });
+    openingGate.insertBefore(petalWrap, openingGate.firstChild);
+  }
+
   gateCharmBtn.addEventListener("click", () => {
     selectSymbol((symIdx + 1) % openingBlessings.length);
+    spawnSparklesFromEl(gateCharmBtn, ["✿", "守", "縁", "福", "安"]);
   });
 
   gateEnterBtn.addEventListener("click", () => {
+    spawnSparklesFromEl(gateEnterBtn, ["✿", "✦", "福", "守"]);
     playChord();
     setTimeout(() => playFurin(1396.9), 220);
     openingGate.classList.add("dismissed");
@@ -440,7 +489,18 @@
     btn.addEventListener("click", () => {
       const f = btn.dataset.filter;
       filterBtns.forEach((b) => b.classList.toggle("active", b === btn));
-      flipCards.forEach((c) => c.classList.toggle("hidden", f !== "all" && c.dataset.cat !== f));
+      let visIdx = 0;
+      flipCards.forEach((c) => {
+        const hide = f !== "all" && c.dataset.cat !== f;
+        c.classList.toggle("hidden", hide);
+        if (!hide) {
+          c.classList.remove("card-pop");
+          c.style.animationDelay = (visIdx * 45) + "ms";
+          void c.offsetWidth;
+          c.classList.add("card-pop");
+          visIdx += 1;
+        }
+      });
       playHyoshigi(1.05);
     });
   });
@@ -528,6 +588,28 @@
     repKanji.textContent = repState.kanji;
     renderReplicaCord();
     repSummary.textContent = "Kain " + fabLabel + " · Motif " + patternNames[repState.pattern] + " · " + knotNames[repState.knot] + " · " + repState.blessingName;
+    replica3d.querySelectorAll(".replica-pouch-wrap").forEach((wrap) => {
+      wrap.classList.remove("charm-pop");
+      void wrap.offsetWidth;
+      wrap.classList.add("charm-pop");
+    });
+  }
+
+  // Efek miring interaktif halus pada gantungan omamori saat kursor bergerak di stage
+  const replicaStageEl = document.querySelector(".replica-stage");
+  const replicaPerspectiveEl = document.querySelector(".replica-perspective");
+  if (replicaStageEl && replicaPerspectiveEl && window.matchMedia && window.matchMedia("(pointer: fine)").matches) {
+    replicaStageEl.addEventListener("mousemove", (e) => {
+      const r = replicaStageEl.getBoundingClientRect();
+      const rx = ((e.clientY - r.top) / r.height - 0.5) * -10;
+      const ry = ((e.clientX - r.left) / r.width - 0.5) * 12;
+      replicaPerspectiveEl.style.transform = "rotateX(" + rx.toFixed(1) + "deg) rotateY(" + ry.toFixed(1) + "deg)";
+      replicaPerspectiveEl.style.transition = "transform 0.25s ease-out";
+    });
+    replicaStageEl.addEventListener("mouseleave", () => {
+      replicaPerspectiveEl.style.transform = "rotateX(0deg) rotateY(0deg)";
+      replicaPerspectiveEl.style.transition = "transform 0.6s var(--ease-smooth)";
+    });
   }
 
   function buildCordMarkup(color, knotType) {
@@ -939,6 +1021,7 @@
       omikujiDesc.textContent = picked.msg;
       btnApplyOmikuji.style.display = "inline-block";
       btnDrawOmikuji.disabled = false;
+      spawnSparklesFromEl(omikujiCyl, ["✿", "✦", picked.kanji.slice(0, 1), "福"]);
       playFurin(1318.5);
       setTimeout(() => playKoto(5, 0.075), 140);
     }, 600);
@@ -972,16 +1055,16 @@
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
 
     // Latar kertas editorial
-    ctx.fillStyle = isDark ? "#241914" : "#f3f7fb";
+    ctx.fillStyle = isDark ? "#1e1715" : "#fdf8f2";
     ctx.fillRect(0, 0, 720, 960);
 
     // Bingkai garis rambut
-    ctx.strokeStyle = isDark ? "#4a362c" : "#d4e0ec";
+    ctx.strokeStyle = isDark ? "#473832" : "#e8dbd0";
     ctx.lineWidth = 2;
     ctx.strokeRect(36, 36, 648, 888);
 
     // Header teks
-    ctx.fillStyle = isDark ? "#d98c5f" : "#3d6b99";
+    ctx.fillStyle = isDark ? "#e68c7a" : "#cc5c4e";
     ctx.font = "600 18px sans-serif";
     ctx.textAlign = "center";
     ctx.fillText("OMAMORI NO SEKAI  ·  お守りの世界", 360, 96);
@@ -1092,17 +1175,17 @@
     });
 
     // Judul & Harapan Pribadi
-    ctx.fillStyle = isDark ? "#f3e8dc" : "#1b2838";
+    ctx.fillStyle = isDark ? "#f6ede4" : "#332824";
     ctx.font = "600 28px Georgia, serif";
     ctx.fillText(repState.blessingName, 360, 622);
 
-    ctx.fillStyle = isDark ? "#bfa998" : "#5a6d82";
+    ctx.fillStyle = isDark ? "#c4b0a3" : "#77665d";
     ctx.font = "500 18px sans-serif";
     ctx.fillText(repSummary.textContent, 360, 658);
 
     // Bungkus teks harapan (word wrap)
     const wish = (repWishInput.value.trim() || "Semoga tugas dan ujian semester ini lancar, nilai aman, dan tetap sempat istirahat.");
-    ctx.fillStyle = isDark ? "#f3e8dc" : "#1b2838";
+    ctx.fillStyle = isDark ? "#f6ede4" : "#332824";
     ctx.font = "italic 22px Georgia, serif";
     const words = ("“" + wish + "”").split(" ");
     let line = "";
@@ -1120,7 +1203,7 @@
     ctx.fillText(line.trim(), 360, ly);
 
     // Footer cap pameran
-    ctx.fillStyle = isDark ? "#bfa998" : "#5a6d82";
+    ctx.fillStyle = isDark ? "#c4b0a3" : "#77665d";
     ctx.font = "500 15px sans-serif";
     ctx.fillText("Pameran Taishu Bunka · Stan Omamori no Sekai", 360, 882);
 
@@ -1130,6 +1213,7 @@
     link.click();
     playChord();
     setTimeout(() => playFurin(1396.9), 200);
+    spawnSparklesFromEl(document.getElementById("btnRepDownload"), ["✿", "✦", repState.kanji.slice(0, 1)]);
     showToast("Replika omamori (PNG) berhasil diunduh");
   });
 
@@ -1246,8 +1330,8 @@
     });
   });
 
-  /* === 17. Mini Kuis Tebak Fakta Omamori === */
-  const triviaList = [
+  /* === 17. Mini Kuis Acak dari 100 Bank Soal (4 atau 6 Soal Berbeda Tiap Sesi) === */
+  const fallbackBank = [
     {
       q: "Mengapa dalam tradisi Jepang kantong omamori tidak boleh dibuka?",
       opts: [
@@ -1257,38 +1341,124 @@
       ],
       ans: 1,
       note: "Tepat sekali! Membuka kantongnya dipercaya melepaskan doa dan berkah yang sudah disucikan."
-    },
-    {
-      q: "Apa nama upacara pembakaran suci untuk mengembalikan omamori setelah sekitar satu tahun?",
-      opts: ["Otakiage", "Magatama", "Seigaiha"],
-      ans: 0,
-      note: "Benar! Otakiage adalah upacara mengembalikan omamori lama ke kuil sebagai ungkapan syukur."
-    },
-    {
-      q: "Jika seorang mahasiswa sedang menghadapi ujian akhir, omamori mana yang paling tepat?",
-      opts: ["Kōtsū-anzen", "Gakugyō-jōju", "Anzan"],
-      ans: 1,
-      note: "Betul! Gakugyō-jōju (学業成就) khusus untuk mendoakan kelancaran belajar dan ujian."
     }
   ];
+  const fullQuizBank = (Array.isArray(window.OMAMORI_QUIZ_BANK) && window.OMAMORI_QUIZ_BANK.length >= 4)
+    ? window.OMAMORI_QUIZ_BANK
+    : fallbackBank;
 
+  const SEEN_STORAGE_KEY = "omamori-quiz-seen-v1";
+  let quizSize = 4;
+  let activeQuizSet = [];
   let triviaIdx = 0;
   let triviaScoreVal = 0;
   let triviaAnswered = false;
+
   const triviaQ = document.getElementById("triviaQ");
   const triviaOpts = document.getElementById("triviaOpts");
   const triviaFeedback = document.getElementById("triviaFeedback");
   const triviaCounter = document.getElementById("triviaCounter");
   const triviaScoreEl = document.getElementById("triviaScore");
+  const triviaProgressBar = document.getElementById("triviaProgressBar");
   const btnNextTrivia = document.getElementById("btnNextTrivia");
+  const btnShuffleTrivia = document.getElementById("btnShuffleTrivia");
+  const sizePills = document.querySelectorAll(".size-pill");
+
+  function fisherYates(arr) {
+    const copy = arr.slice();
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = copy[i];
+      copy[i] = copy[j];
+      copy[j] = tmp;
+    }
+    return copy;
+  }
+
+  function loadSeenIndices() {
+    try {
+      const raw = localStorage.getItem(SEEN_STORAGE_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveSeenIndices(list) {
+    try {
+      localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify(list));
+    } catch (e) {}
+  }
+
+  function pickRandomQuizSet(count) {
+    const total = fullQuizBank.length;
+    const targetCount = Math.min(count, total);
+    let seen = loadSeenIndices().filter((idx) => Number.isInteger(idx) && idx >= 0 && idx < total);
+    const seenSet = new Set(seen);
+
+    let unseenPool = [];
+    for (let i = 0; i < total; i++) {
+      if (!seenSet.has(i)) unseenPool.push(i);
+    }
+
+    let pickedIndices = [];
+    if (unseenPool.length >= targetCount) {
+      pickedIndices = fisherYates(unseenPool).slice(0, targetCount);
+      saveSeenIndices(seen.concat(pickedIndices));
+    } else {
+      // Habiskan sisa soal yang belum pernah keluar, lalu reset dan acak ulang sisanya
+      const firstPart = fisherYates(unseenPool);
+      const exclude = new Set(firstPart);
+      const refillPool = [];
+      for (let i = 0; i < total; i++) {
+        if (!exclude.has(i)) refillPool.push(i);
+      }
+      const secondPart = fisherYates(refillPool).slice(0, targetCount - firstPart.length);
+      pickedIndices = firstPart.concat(secondPart);
+      saveSeenIndices(secondPart);
+    }
+
+    // Acak urutan pilihan jawaban di tiap soal agar tidak mudah dihafal posisinya
+    return pickedIndices.map((idx) => {
+      const src = fullQuizBank[idx];
+      const mappedOpts = src.opts.map((text, oi) => ({ text, isCorrect: oi === src.ans }));
+      const shuffledOpts = fisherYates(mappedOpts);
+      return {
+        q: src.q,
+        opts: shuffledOpts.map((o) => o.text),
+        ans: shuffledOpts.findIndex((o) => o.isCorrect),
+        note: src.note
+      };
+    });
+  }
+
+  function startNewQuizSession(withToast) {
+    activeQuizSet = pickRandomQuizSet(quizSize);
+    triviaIdx = 0;
+    triviaScoreVal = 0;
+    if (triviaScoreEl) triviaScoreEl.textContent = "Skor: 0 / " + activeQuizSet.length;
+    renderTrivia();
+    if (withToast) {
+      showToast(activeQuizSet.length + " soal baru diacak dari " + fullQuizBank.length + " bank soal");
+    }
+  }
 
   function renderTrivia() {
-    const item = triviaList[triviaIdx];
+    if (!activeQuizSet.length) return;
+    const item = activeQuizSet[triviaIdx];
+    const total = activeQuizSet.length;
     triviaAnswered = false;
-    triviaCounter.textContent = "Pertanyaan 0" + (triviaIdx + 1) + " / 0" + triviaList.length;
+    triviaCounter.textContent = "Pertanyaan 0" + (triviaIdx + 1) + " / 0" + total;
     triviaQ.textContent = item.q;
+    triviaQ.classList.remove("fade-swap");
+    void triviaQ.offsetWidth;
+    triviaQ.classList.add("fade-swap");
     triviaFeedback.textContent = "";
-    btnNextTrivia.textContent = triviaIdx === triviaList.length - 1 ? "Lihat Skor Akhir" : "Pertanyaan Berikutnya →";
+    btnNextTrivia.textContent = triviaIdx === total - 1 ? "Lihat Skor Akhir" : "Pertanyaan Berikutnya →";
+    if (triviaProgressBar) {
+      triviaProgressBar.style.width = (((triviaIdx + 1) / total) * 100).toFixed(1) + "%";
+    }
     triviaOpts.innerHTML = "";
 
     item.opts.forEach((optText, i) => {
@@ -1306,8 +1476,9 @@
         });
         if (i === item.ans) {
           triviaScoreVal += 1;
-          triviaScoreEl.textContent = "Skor: " + triviaScoreVal + " / " + triviaList.length;
+          triviaScoreEl.textContent = "Skor: " + triviaScoreVal + " / " + total;
           triviaFeedback.textContent = item.note;
+          spawnSparklesFromEl(btn, ["✿", "✦", "大", "吉"]);
           playKoto(6, 0.08);
           setTimeout(() => playFurin(1396.9), 120);
         } else {
@@ -1320,18 +1491,38 @@
     });
   }
 
-  btnNextTrivia.addEventListener("click", () => {
-    if (triviaIdx === triviaList.length - 1) {
+  sizePills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      const nextSize = Number(pill.dataset.quizSize) || 4;
+      if (nextSize === quizSize) return;
+      quizSize = nextSize;
+      sizePills.forEach((p) => p.classList.toggle("active", p === pill));
+      playHyoshigi(1.08);
+      startNewQuizSession(true);
+    });
+  });
+
+  if (btnShuffleTrivia) {
+    btnShuffleTrivia.addEventListener("click", () => {
       playChord();
+      startNewQuizSession(true);
+    });
+  }
+
+  btnNextTrivia.addEventListener("click", () => {
+    const total = activeQuizSet.length;
+    if (triviaIdx === total - 1) {
+      playChord();
+      const perfect = triviaScoreVal === total;
       openModal({
-        stamp: triviaScoreVal === triviaList.length ? "大吉" : "吉",
-        kicker: "Hasil Kuis Singkat Omamori",
-        title: "Skor Kamu: " + triviaScoreVal + " dari " + triviaList.length,
-        desc: triviaScoreVal === triviaList.length
-          ? "Luar biasa! Kamu sudah memahami sejarah, etika, dan jenis omamori dengan sangat baik."
-          : "Terima kasih sudah mencoba kuis singkat kami! Kamu bisa mengulang kuis atau langsung merakit replika omamori.",
+        stamp: perfect ? "大吉" : triviaScoreVal >= Math.ceil(total / 2) ? "中吉" : "吉",
+        kicker: "Hasil Kuis Acak · Bank 100 Soal",
+        title: "Skor Kamu: " + triviaScoreVal + " dari " + total,
+        desc: perfect
+          ? "Sempurna! Semua soal acak berhasil kamu jawab dengan tepat. Coba acak soal baru untuk tantangan berbeda."
+          : "Terima kasih sudah ikut kuis! Tekan tombol di bawah untuk mengacak " + total + " soal baru yang berbeda dari bank 100 soal kami.",
         actions: [
-          { label: "Ulangi Kuis", primary: true, onClick: () => { triviaIdx = 0; triviaScoreVal = 0; triviaScoreEl.textContent = "Skor: 0 / 3"; renderTrivia(); } },
+          { label: "Acak " + total + " Soal Baru ↻", primary: true, onClick: () => startNewQuizSession(true) },
           { label: "Tutup" }
         ]
       });
@@ -1342,7 +1533,7 @@
     }
   });
 
-  renderTrivia();
+  startNewQuizSession(false);
 
 
   /* === 18. Laci Menu Navigasi Minimalis untuk HP & Tablet === */

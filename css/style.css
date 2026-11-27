@@ -1,59 +1,139 @@
 :root {
-  /* Palet terang : Ice Blue & White lembut */
-  --kinari: #f3f7fb;
+  /* Palet terang : Washi Cream & Pastel Jepang hangat yang cerah */
+  --kinari: #fdf8f2;
   --shiro: #ffffff;
-  --sumi: #1b2838;
-  --hai: #5a6d82;
-  --line: #d4e0ec;
-  --line-soft: #e6eff6;
-  --shu: #3d6b99;
-  --sakura: #eef4fa;
-  --sakura-border: #d4e2f0;
-  --matcha: #e8f3f1;
-  --matcha-border: #cce2de;
-  --matcha-ink: #2f615a;
-  --asagi: #e2eef8;
-  --asagi-border: #c5dcf0;
-  --asagi-ink: #2d567c;
-  --kuchinashi: #edf3f9;
-  --kuchinashi-border: #d2e0ee;
-  --kuchinashi-ink: #345a7d;
-  --fuji: #ececf7;
-  --fuji-border: #d5d6ec;
-  --card-back-bg: #1b2838;
-  --card-back-fg: #f0f6fc;
-  --card-back-muted: #b5c7da;
-  --header-bg: rgba(243, 247, 251, 0.90);
-  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --sumi: #332824;
+  --hai: #77665d;
+  --line: rgba(154, 122, 102, 0.20);
+  --line-soft: rgba(154, 122, 102, 0.11);
+  --line-ghost: rgba(154, 122, 102, 0.11);
+  --shu: #cc5c4e;
+  --shu-soft: #faeae7;
+
+  /* Warna pastel asli untuk tiap jenis omamori (depan & belakang selaras) */
+  --sakura: #fef0f2;
+  --sakura-border: rgba(216, 146, 160, 0.26);
+  --sakura-back: #fce0e5;
+  --sakura-back-ink: #5e2933;
+  --sakura-back-muted: #854b57;
+
+  --anzan: #fff4f6;
+  --anzan-border: rgba(224, 164, 176, 0.26);
+  --anzan-back: #fde6eb;
+  --anzan-back-ink: #632f3a;
+  --anzan-back-muted: #8a525e;
+
+  --matcha: #eff7ec;
+  --matcha-border: rgba(132, 176, 124, 0.26);
+  --matcha-ink: #2f5b33;
+  --matcha-back: #dcefd7;
+  --matcha-back-ink: #244728;
+  --matcha-back-muted: #466d4a;
+
+  --asagi: #edf6fc;
+  --asagi-border: rgba(118, 170, 204, 0.26);
+  --asagi-ink: #275475;
+  --asagi-back: #d6ebfa;
+  --asagi-back-ink: #1e4360;
+  --asagi-back-muted: #416887;
+
+  --kuchinashi: #fef7df;
+  --kuchinashi-border: rgba(218, 178, 86, 0.28);
+  --kuchinashi-ink: #7d5b1a;
+  --kuchinashi-back: #fcebbd;
+  --kuchinashi-back-ink: #573e10;
+  --kuchinashi-back-muted: #7f6025;
+
+  --fuji: #f5effb;
+  --fuji-border: rgba(166, 138, 198, 0.26);
+  --fuji-back: #e8dbf7;
+  --fuji-back-ink: #432d5e;
+  --fuji-back-muted: #664e85;
+
+  --aka: #fdf0ec;
+  --aka-border: rgba(208, 114, 96, 0.26);
+  --aka-back: #f9dbd3;
+  --aka-back-ink: #64261e;
+  --aka-back-muted: #8c483f;
+
+  --card-back-bg: #fcebbd;
+  --card-back-fg: #573e10;
+  --card-back-muted: #7f6025;
+  --header-bg: rgba(253, 248, 242, 0.96);
+
+  --shadow-soft: 0 8px 26px rgba(128, 92, 72, 0.06);
+  --shadow-hover: 0 14px 34px rgba(128, 92, 72, 0.11);
+  --shadow-dialog: 0 22px 54px rgba(74, 48, 36, 0.14);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.38, 0.64, 1);
   --ease-flip: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [data-theme="dark"] {
-  /* Palet gelap : Dark Cokelat hangat (Espresso & Krem Latte) */
-  --kinari: #241914;
-  --shiro: #2f211b;
-  --sumi: #f3e8dc;
-  --hai: #bfa998;
-  --line: #4a362c;
-  --line-soft: #3a2a22;
-  --shu: #d98c5f;
-  --sakura: #3a2722;
-  --sakura-border: #573b34;
-  --matcha: #292c24;
-  --matcha-border: #404639;
-  --matcha-ink: #b2c9a6;
-  --asagi: #282b30;
-  --asagi-border: #3f444c;
-  --asagi-ink: #a8c2d4;
-  --kuchinashi: #3b2d20;
-  --kuchinashi-border: #594430;
-  --kuchinashi-ink: #e5be8a;
-  --fuji: #33272c;
-  --fuji-border: #4d3b43;
-  --card-back-bg: #1c130f;
-  --card-back-fg: #f5ece1;
-  --card-back-muted: #c9b4a2;
-  --header-bg: rgba(36, 25, 20, 0.92);
+  /* Palet gelap : Twilight Espresso & Pastel Hangat selaras */
+  --kinari: #1e1715;
+  --shiro: #2a211e;
+  --sumi: #f6ede4;
+  --hai: #c4b0a3;
+  --line: rgba(238, 208, 188, 0.15);
+  --line-soft: rgba(238, 208, 188, 0.09);
+  --line-ghost: rgba(238, 208, 188, 0.085);
+  --shu: #e68c7a;
+  --shu-soft: rgba(230, 140, 122, 0.16);
+
+  --sakura: #362427;
+  --sakura-border: rgba(232, 152, 168, 0.20);
+  --sakura-back: #462b32;
+  --sakura-back-ink: #fce8ec;
+  --sakura-back-muted: #dab4bd;
+
+  --anzan: #352528;
+  --anzan-border: rgba(236, 174, 184, 0.20);
+  --anzan-back: #452e34;
+  --anzan-back-ink: #fdf0f2;
+  --anzan-back-muted: #dcc0c7;
+
+  --matcha: #253024;
+  --matcha-border: rgba(154, 198, 146, 0.20);
+  --matcha-ink: #b8dab0;
+  --matcha-back: #30412e;
+  --matcha-back-ink: #ebf7e8;
+  --matcha-back-muted: #b9d1b5;
+
+  --asagi: #232d36;
+  --asagi-border: rgba(144, 192, 224, 0.20);
+  --asagi-ink: #aad0ea;
+  --asagi-back: #2c3d4d;
+  --asagi-back-ink: #e8f4fc;
+  --asagi-back-muted: #b3cde0;
+
+  --kuchinashi: #362d1e;
+  --kuchinashi-border: rgba(232, 194, 108, 0.22);
+  --kuchinashi-ink: #efd28c;
+  --kuchinashi-back: #483b22;
+  --kuchinashi-back-ink: #fdf4dc;
+  --kuchinashi-back-muted: #dac79c;
+
+  --fuji: #2f2638;
+  --fuji-border: rgba(186, 160, 220, 0.20);
+  --fuji-back: #3e314d;
+  --fuji-back-ink: #f3ebfc;
+  --fuji-back-muted: #cbbcdf;
+
+  --aka: #392420;
+  --aka-border: rgba(230, 134, 114, 0.22);
+  --aka-back: #4d2e28;
+  --aka-back-ink: #fdebe7;
+  --aka-back-muted: #e0bab2;
+
+  --card-back-bg: #483b22;
+  --card-back-fg: #fdf4dc;
+  --card-back-muted: #dac79c;
+  --header-bg: rgba(30, 23, 21, 0.96);
+
+  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.28);
+  --shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.38);
+  --shadow-dialog: 0 24px 56px rgba(0, 0, 0, 0.50);
 }
 
 * {
@@ -2676,4 +2756,434 @@ footer {
     border-left: 1px solid var(--shu);
     border-color: var(--shu);
   }
+}
+/* =====================================================================
+   PEMBARUAN ESTETIKA PASTEL HANGAT, DIALOG LEMBUT & ANIMASI INTERAKTIF
+   ===================================================================== */
+
+/* Latar halus berpola titik pastel hangat di gerbang pembuka */
+.opening-gate {
+  background-color: var(--kinari);
+  background-image:
+    radial-gradient(circle at 18% 20%, var(--sakura) 0%, transparent 45%),
+    radial-gradient(circle at 84% 78%, var(--kuchinashi) 0%, transparent 46%);
+  background-size: 100% 100%;
+}
+
+/* Dialog Pembuka & Pop-Up Modal: Sudut lembut, garis tepi samar, aksen pita pastel */
+.gate-frame,
+.modal-card {
+  border: 1px solid var(--line-ghost);
+  border-radius: 24px;
+  box-shadow: var(--shadow-dialog);
+  overflow: hidden;
+}
+
+.gate-frame::before,
+.modal-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f3b5c0, #f5d88b, #b3d6a9, #a8cfe8);
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.gate-quote-box {
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--kinari);
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+
+.gate-enter-btn,
+.btn {
+  border-radius: 999px;
+  transition: transform 0.38s var(--ease-spring), background-color 0.32s var(--ease-smooth), color 0.32s var(--ease-smooth), border-color 0.32s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
+}
+
+.gate-enter-btn:hover,
+.btn-ink:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 22px rgba(204, 92, 78, 0.22);
+}
+
+.btn-ghost {
+  border-color: var(--line);
+  background: var(--shiro);
+}
+
+.btn-ghost:hover {
+  border-color: var(--shu);
+  color: var(--shu);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Samarkan garis tepi semua kotak/kartu konten jadi lembut & melayang halus */
+.hero-photo,
+.anatomy-stage,
+.anatomy-info,
+.era-card,
+.color-guide,
+.omikuji-box,
+.replica-stage,
+.studio-controls,
+.etika-demo,
+.materials-box,
+.diy-panel,
+.trivia-box,
+.booth-note,
+.member-card {
+  border: 1px solid var(--line-ghost);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.45s var(--ease-smooth),
+    box-shadow 0.45s var(--ease-smooth),
+    background-color 0.55s var(--ease-smooth),
+    border-color 0.45s var(--ease-smooth);
+}
+
+.hero-photo {
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.hero-photo-frame {
+  border-radius: 12px;
+}
+
+.member-card:hover,
+.anatomy-stage:hover,
+.anatomy-info:hover,
+.era-card:hover,
+.omikuji-box:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.track-switch {
+  border: 1px solid var(--line-ghost);
+  border-radius: 999px;
+  padding: 4px;
+  box-shadow: var(--shadow-soft);
+}
+
+.track-btn {
+  border-radius: 999px;
+  transition: all 0.35s var(--ease-spring);
+}
+
+.ctrl-btn,
+.anatomy-tab,
+.opt-chip,
+.custom-color-chip,
+.diy-num-btn,
+.mat-btn,
+.trivia-opt {
+  border-color: var(--line-ghost);
+  border-radius: 10px;
+  transition:
+    transform 0.32s var(--ease-spring),
+    background-color 0.3s var(--ease-smooth),
+    border-color 0.3s var(--ease-smooth),
+    color 0.3s var(--ease-smooth),
+    box-shadow 0.32s var(--ease-smooth);
+}
+
+.ctrl-btn:hover,
+.opt-chip:hover,
+.anatomy-tab:hover,
+.filter-btn:hover,
+.diy-num-btn:hover,
+.mat-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.ctrl-btn:active,
+.opt-chip:active,
+.filter-btn:active,
+.sym-btn:active,
+.trivia-opt:active {
+  transform: scale(0.96);
+}
+
+.studio-select,
+.studio-input {
+  border: 1px solid var(--line-ghost);
+  border-radius: 12px;
+  padding: 11px 14px;
+}
+
+.demo-stage,
+.omikuji-shaker {
+  border: 1px solid var(--line-ghost);
+  border-radius: 14px;
+}
+
+/* === 9 Kartu Omamori: Bagian Depan & Belakang Selaras Warna Pastel === */
+.flip-card {
+  height: 254px;
+  transition: transform 0.42s var(--ease-spring);
+}
+
+.flip-card:hover {
+  transform: translateY(-4px);
+}
+
+.flip-inner {
+  transition: transform 0.85s var(--ease-spring);
+}
+
+.flip-card:hover .flip-inner {
+  transform: translateY(0);
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  border-radius: 18px;
+  padding: 22px 20px;
+  border: 1px solid var(--line-ghost);
+  box-shadow: var(--shadow-soft);
+}
+
+.flip-card:hover .flip-front,
+.flip-card:hover .flip-back {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--line);
+}
+
+/* Warna Depan & Belakang yang cocok untuk masing-masing jenis (Cerah & Gelap) */
+.flip-card[data-tone="sakura"] .flip-front { background: var(--sakura); border-color: var(--sakura-border); }
+.flip-card[data-tone="sakura"] .flip-back  { background: var(--sakura-back); border-color: var(--sakura-border); color: var(--sakura-back-ink); }
+.flip-card[data-tone="sakura"] .flip-back p { color: var(--sakura-back-ink); }
+.flip-card[data-tone="sakura"] .flip-back .back-meta { color: var(--sakura-back-muted); border-top-color: var(--sakura-border); }
+
+.flip-card[data-tone="anzan"] .flip-front { background: var(--anzan); border-color: var(--anzan-border); }
+.flip-card[data-tone="anzan"] .flip-back  { background: var(--anzan-back); border-color: var(--anzan-border); color: var(--anzan-back-ink); }
+.flip-card[data-tone="anzan"] .flip-back p { color: var(--anzan-back-ink); }
+.flip-card[data-tone="anzan"] .flip-back .back-meta { color: var(--anzan-back-muted); border-top-color: var(--anzan-border); }
+
+.flip-card[data-tone="matcha"] .flip-front { background: var(--matcha); border-color: var(--matcha-border); }
+.flip-card[data-tone="matcha"] .flip-back  { background: var(--matcha-back); border-color: var(--matcha-border); color: var(--matcha-back-ink); }
+.flip-card[data-tone="matcha"] .flip-back p { color: var(--matcha-back-ink); }
+.flip-card[data-tone="matcha"] .flip-back .back-meta { color: var(--matcha-back-muted); border-top-color: var(--matcha-border); }
+
+.flip-card[data-tone="asagi"] .flip-front { background: var(--asagi); border-color: var(--asagi-border); }
+.flip-card[data-tone="asagi"] .flip-back  { background: var(--asagi-back); border-color: var(--asagi-border); color: var(--asagi-back-ink); }
+.flip-card[data-tone="asagi"] .flip-back p { color: var(--asagi-back-ink); }
+.flip-card[data-tone="asagi"] .flip-back .back-meta { color: var(--asagi-back-muted); border-top-color: var(--asagi-border); }
+
+.flip-card[data-tone="kuchinashi"] .flip-front { background: var(--kuchinashi); border-color: var(--kuchinashi-border); }
+.flip-card[data-tone="kuchinashi"] .flip-back  { background: var(--kuchinashi-back); border-color: var(--kuchinashi-border); color: var(--kuchinashi-back-ink); }
+.flip-card[data-tone="kuchinashi"] .flip-back p { color: var(--kuchinashi-back-ink); }
+.flip-card[data-tone="kuchinashi"] .flip-back .back-meta { color: var(--kuchinashi-back-muted); border-top-color: var(--kuchinashi-border); }
+
+.flip-card[data-tone="fuji"] .flip-front { background: var(--fuji); border-color: var(--fuji-border); }
+.flip-card[data-tone="fuji"] .flip-back  { background: var(--fuji-back); border-color: var(--fuji-border); color: var(--fuji-back-ink); }
+.flip-card[data-tone="fuji"] .flip-back p { color: var(--fuji-back-ink); }
+.flip-card[data-tone="fuji"] .flip-back .back-meta { color: var(--fuji-back-muted); border-top-color: var(--fuji-border); }
+
+.flip-card[data-tone="aka"] .flip-front { background: var(--aka); border-color: var(--aka-border); }
+.flip-card[data-tone="aka"] .flip-back  { background: var(--aka-back); border-color: var(--aka-border); color: var(--aka-back-ink); }
+.flip-card[data-tone="aka"] .flip-back p { color: var(--aka-back-ink); }
+.flip-card[data-tone="aka"] .flip-back .back-meta { color: var(--aka-back-muted); border-top-color: var(--aka-border); }
+
+.flip-card.card-pop {
+  animation: cardFilterIn 0.48s var(--ease-spring) both;
+}
+
+@keyframes cardFilterIn {
+  0% { opacity: 0; transform: translateY(16px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* === Animasi Gerak Halus & Interaktif (GPU-only, tanpa blur) === */
+.anatomy-svg {
+  animation: gentleFloat 5.2s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.anatomy-pin.active::after {
+  animation: pinPulse 2.2s var(--ease-smooth) infinite;
+}
+
+@keyframes pinPulse {
+  0% { opacity: 0.65; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.75); }
+}
+
+.replica-pouch-wrap.charm-pop {
+  animation: charmPop 0.45s var(--ease-spring);
+}
+
+@keyframes charmPop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.06) rotate(-2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.modal-backdrop.open .modal-stamp {
+  animation: stampPop 0.55s var(--ease-spring) 0.1s both;
+}
+
+@keyframes stampPop {
+  0% { opacity: 0; transform: scale(0.6) rotate(-14deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-4deg); }
+}
+
+/* Kelopak sakura lembut di layar gerbang pembuka */
+.ambient-petals {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gate-frame {
+  z-index: 2;
+}
+
+.ambient-petal {
+  position: absolute;
+  top: -24px;
+  width: 12px;
+  height: 16px;
+  border-radius: 65% 35% 65% 35%;
+  background: #f5bfc8;
+  opacity: 0.45;
+  animation: petalDrift var(--dur, 11s) linear var(--delay, 0s) infinite;
+  will-change: transform, opacity;
+}
+
+[data-theme="dark"] .ambient-petal {
+  background: #d88f9e;
+  opacity: 0.25;
+}
+
+@keyframes petalDrift {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  12% { opacity: 0.45; }
+  50% {
+    transform: translate3d(var(--sway, 34px), 52vh, 0) rotate(170deg);
+  }
+  88% { opacity: 0.35; }
+  100% {
+    transform: translate3d(calc(var(--sway, 34px) * -0.6), 112vh, 0) rotate(340deg);
+    opacity: 0;
+  }
+}
+
+/* Percikan interaktif (kanji / kelopak mini) saat klik fitur penting */
+.spark-particle {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 150;
+  font-family: "Shippori Mincho", serif;
+  font-size: 0.95rem;
+  color: var(--shu);
+  user-select: none;
+  will-change: transform, opacity;
+  animation: sparkBurst 0.9s var(--ease-smooth) forwards;
+}
+
+@keyframes sparkBurst {
+  0% {
+    opacity: 0;
+    transform: translate3d(var(--x), var(--y), 0) scale(0.5) rotate(0deg);
+  }
+  20% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(calc(var(--x) + var(--dx)), calc(var(--y) + var(--dy)), 0) scale(1.15) rotate(var(--rot));
+  }
+}
+
+/* === Pembaruan UI Kuis 100 Bank Soal === */
+.trivia-head-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.trivia-size-switch {
+  display: inline-flex;
+  background: var(--kinari);
+  border: 1px solid var(--line-ghost);
+  border-radius: 999px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.size-pill {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--hai);
+  transition: all 0.28s var(--ease-spring);
+}
+
+.size-pill:hover {
+  color: var(--sumi);
+}
+
+.size-pill.active {
+  background: var(--shu);
+  color: #fffcf8;
+}
+
+.trivia-progress {
+  width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--kinari);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.trivia-progress-bar {
+  height: 100%;
+  width: 25%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--shu), #e5a95e);
+  transition: width 0.5s var(--ease-smooth);
+}
+
+.trivia-opt {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line-ghost);
+}
+
+.trivia-opt:hover:not(:disabled) {
+  border-color: var(--shu);
+  background: var(--shiro);
+  box-shadow: var(--shadow-soft);
 }
