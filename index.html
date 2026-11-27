@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omamori no Sekai お守りの世界 | Arsip &amp; Panduan Pameran</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/scroll-reveal.css" />
+</head>
+<body class="gate-locked">
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+  <!-- GERBANG PEMBUKA INTERAKTIF -->
+  <div class="opening-gate" id="openingGate" role="dialog" aria-modal="true" aria-label="Pembukaan Omamori no Sekai">
+    <div class="gate-frame">
+      <div class="gate-kicker">Pameran Budaya Jepang</div>
+      <div class="gate-jp">ようこそ · お守りの世界へ</div>
+
+      <button type="button" class="gate-charm-btn" id="gateCharmBtn" aria-label="Sentuh omamori untuk mendengar doa pembuka">
+        <span class="gate-ripple" id="gateRipple"></span>
+        <img
+          src="assets/logo-omamori.png"
+          alt="Logo Omamori no Sekai"
+          class="gate-charm-img"
+        />
+      </button>
+
+      <h2 class="gate-title">Omamori no Sekai</h2>
+
+      <div class="gate-quote-box">
+        <div class="gate-quote" id="gateQuote">“Satu simpul kecil menyimpan doa yang panjang. Semoga langkahmu hari ini selalu tenang.”</div>
+        <div class="gate-quote-sub" id="gateQuoteSub">守 · Mamoru : Perlindungan &amp; Ketenangan</div>
+      </div>
+
+      <div class="gate-symbols" role="group" aria-label="Pilih simbol doa pembuka">
+        <button type="button" class="sym-btn active" data-sym="0" title="Mamoru: Perlindungan">守</button>
+        <button type="button" class="sym-btn" data-sym="1" title="En: Ikatan Baik">縁</button>
+        <button type="button" class="sym-btn" data-sym="2" title="Fuku: Keberuntungan">福</button>
+        <button type="button" class="sym-btn" data-sym="3" title="An: Kedamaian">安</button>
+      </div>
+      <div class="gate-hint">Sentuh simbol atau omamori di atas untuk mendengar alunan nada Jepang</div>
+
+      <button type="button" class="gate-enter-btn" id="gateEnterBtn">Masuk ke Omamori no Sekai →</button>
+    </div>
+  </div>
+
+  <header>
+    <div class="nav-inner">
+      <a class="brand" href="#beranda" id="brandHomeLink" title="Kembali ke atas">
+        <img
+          src="assets/logo-omamori.png"
+          alt="Logo Omamori no Sekai"
+          class="brand-logo-img"
+        />
+        <span>Omamori no Sekai</span>
+      </a>
+      <nav aria-label="Navigasi utama">
+        <a href="#makna">Makna</a>
+        <a href="#sejarah">Linimasa</a>
+        <a href="#jenis">Jenis</a>
+        <a href="#rakit">Rakit</a>
+        <a href="#etika">Etika</a>
+        <a href="#cara-buat">DIY</a>
+        <a href="#glosarium">Glosarium</a>
+      </nav>
+      <div class="nav-controls">
+        <button type="button" class="icon-btn" id="themeToggle" aria-pressed="false" title="Ganti mode gelap atau terang" aria-label="Ganti mode gelap atau terang">
+          <svg id="themeIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="icon-btn" id="soundToggle" aria-pressed="true" title="Matikan atau nyalakan suara" aria-label="Matikan atau nyalakan suara">
+          <svg id="soundIconSvg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        </button>
+        <button type="button" class="icon-btn menu-toggle" id="menuToggle" aria-expanded="false" title="Menu navigasi" aria-label="Buka menu navigasi">
+          <svg id="menuIconSvg" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="beranda">
+    <div data-section="sections/00-hero.html"></div>
+    <div data-section="sections/01-makna.html"></div>
+    <div data-section="sections/02-sejarah.html"></div>
+    <div data-section="sections/03-jenis.html"></div>
+    <div data-section="sections/04-rakit.html"></div>
+    <div data-section="sections/05-etika.html"></div>
+    <div data-section="sections/06-diy.html"></div>
+    <div data-section="sections/07-glosarium.html"></div>
+    <div data-section="sections/08-stan.html"></div>
+    <div data-section="sections/09-sumber.html"></div>
+  </main>
+
+  <!-- POP-UP EDITORIAL INTERAKTIF -->
+  <div class="modal-backdrop" id="editorialModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Tutup pop-up">×</button>
+      <div class="modal-stamp" id="modalStamp">福</div>
+      <span class="modal-kicker" id="modalKicker">Omamori no Sekai</span>
+      <h3 id="modalTitle">Kartu Harapanmu</h3>
+      <p id="modalDesc">Pesan dan detail omamori tampil di sini.</p>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toastBox" role="status" aria-live="polite"></div>
+
+  <footer>
+    <span>Arsip &amp; Panduan Pameran Budaya Jepang</span>
+    <button type="button" class="ctrl-btn" id="replayGateBtn" style="font-size:0.75rem;padding:4px 10px;">Buka Pembukaan ↻</button><span>Omamori no Sekai · お守りの世界</span>
+  </footer>
+
+  <script src="js/loader.js"></script>
+</body>
+</html>
